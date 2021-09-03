@@ -1,0 +1,175 @@
+/* 全局样式表 */
+html,
+body,
+#app {
+  height: 100%;
+  min-width: 1366px;
+  font-size: 16px;
+  word-break: break-word;
+  /* background-color: #f5f5fa; */
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, code, em, img, q, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, table, tbody, tr, th, td, input,figure{
+    margin: 0; padding: 0; border: 0;}
+h1,h2,h3,h4,h5{font-size:100%;font-weight:normal;}
+
+
+.clearfix::before,.clearfix::after {
+  display: table;
+  content: '';
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+
+
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.flex{
+  display: flex;
+}
+
+/* 字体颜色 */
+.font10 {
+  font-size: 10px;
+}
+.font12 {
+  font-size: 12px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font20 {
+  font-size: 20px;
+}
+.font24 {
+  font-size: 24px;
+}
+.font30 {
+  font-size: 30px;
+}
+.font-bold {
+  font-weight: bold;
+}
+.colorRed {
+  color: red;
+}
+.borderRed {
+  border: 1px dashed red;
+}
+.borderGreen {
+  border: 1px dashed green;
+}
+.bg-white {
+  background-color: #fff;
+}
+.text-white {
+  color: #fff;
+}
+.text-grey {
+  color: #8d929e;
+}
+.text-blue {
+  color: #409EFF;
+}
+.text-green {
+  color: #67C23A;
+}
+.text-red {
+  color: #f27967;
+}
+
+/* 间距 */
+
+
+.mtb15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mlr15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.p15 {
+  padding: 15px;
+}
+.ptb15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.plr15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.boxShadow{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
+}
+
+/* el UI组件 */
+.el-breadcrumb {
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.el-card {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
+  height: 100%;
+}
+.el-card__body {
+  height: 100%;
+}
+/* 行内表单，inline-block label与content会换行,todo */
+/* .el-form--inline .el-form-item{
+  display: inline-block
+} */
+/* 导航栏 显示隐藏，去掉元素结构限制 ">" */
+.el-menu--collapse .el-menu-item span, .el-menu--collapse .el-submenu>.el-submenu__title span {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: inline-block;
+}
+
+.el-table {
+  margin-top: 15px;
+  font-size: 12px;
+}
+.el-pagination {
+  margin-top: 15px;
+}
+
+.el-steps {
+  margin: 15px 0;
+}
+.el-step__title {
+  font-size: 13px;
+}
+.ql-editor {
+  min-height: 300px;
+}
