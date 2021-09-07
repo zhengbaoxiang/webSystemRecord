@@ -181,7 +181,6 @@
 </div>
 </template>
 <script>
-import cityData from './citydata.js'
 export default {
   name: 'list',
   data () {
@@ -257,7 +256,6 @@ export default {
         resource: '',
         desc: ''
       },
-      cityData,
       progressVisible: false,
       reverse: false,
       timeList: []

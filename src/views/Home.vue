@@ -4,10 +4,17 @@
     <el-header>
         <div>
             <!-- <img style="margin-left: 15px" src="@/assets/logo.png" alt="" /> -->
-            <span style="margin-left: 20px">后台管理系统欢迎您</span>
+            <span style="margin-left: 20px">档案管理系统</span>
         </div>
         <div></div>
-        <el-button type="info" @click="logout">退出</el-button>
+        <el-dropdown>
+          <span class="el-dropdown-link">
+            username<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item  @click="logout">退出</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
     </el-header>
     <!-- 主体内容 -->
     <el-container>
@@ -90,48 +97,36 @@ export default {
     //     })
       const res = {
         'data': [
-          { 'id': 10086,
-            'authName': '欢迎首页',
-            'icon': 'iconfont icon-shangpin',
-            'path': 'welcome'
-          },
           { 'id': 100,
-            'authName': '数据总览',
+            'authName': '总览',
             'icon': 'iconfont icon-baobiao',
-            'path': 'reports',
+            'path': 'overview',
             'children': []
           },
           { 'id': 101,
-            'authName': '订单管理',
-            'icon': 'iconfont icon-tijikongjian',
-            'path': 'orders',
-            'children': [{ 'id': 107, 'authName': '订单列表', 'path': 'orders', 'children': [] }]
-          },
-          { 'id': 102,
-            'authName': '权限管理',
-            'icon': 'iconfont icon-danju',
-            'path': 'rights',
+            'authName': '档案管理',
+            'icon': 'el-icon-files',
+            'path': '',
             'children': [
-              { 'id': 111, 'authName': '角色列表', 'path': 'roles', 'children': [] },
-              { 'id': 112, 'authName': '权限列表', 'path': 'rights', 'children': [] }]
-          },
-          { 'id': 103,
-            'authName': '商品管理',
-            'icon': 'iconfont icon-shangpin',
-            'path': 'goods',
-            'children': [
-              { 'id': 104, 'authName': '商品列表', 'path': 'goods', 'children': [] },
-              { 'id': 115, 'authName': '分类参数', 'path': 'params', 'children': [] },
-              { 'id': 121, 'authName': '商品分类', 'path': 'categories', 'children': [] }
+              { 'id': 107, 'authName': '档案列表', 'path': 'fileList', 'children': [] },
+              { 'id': 108, 'authName': '档案统计', 'path': 'fileStatistic', 'children': [] }
             ]
           },
-          { 'id': 104,
-            'authName': '用户管理',
-            'icon': 'iconfont icon-user',
-            'path': 'users',
-            'children': [{ 'id': 1, 'authName': '用户列表', 'path': 'users', 'children': [] }]
+          { 'id': 200,
+            'authName': '环境管理',
+            'icon': 'el-icon-s-shop',
+            'path': 'environment',
+            'children': []
+          },
+          { 'id': 300,
+            'authName': '系统管理',
+            'icon': 'el-icon-s-tools',
+            'path': 'system',
+            'children': [
+              { 'id': 304, 'authName': '用户列表', 'path': 'user', 'children': [] },
+              { 'id': 305, 'authName': '角色管理', 'path': 'role', 'children': [] }
+            ]
           }
-
         ],
         'meta': { 'msg': '获取菜单列表成功', 'status': 200 } }
       this.menuList = res.data

@@ -1,20 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Users from '../views/user/Users.vue'
-import Rights from '../views/power/Rights.vue'
-import Roles from '../views/power/Roles.vue'
-import Cate from '../views/goods/Cate.vue'
-import Params from '../views/goods/Params.vue'
-import List from '../views/goods/List.vue'
-import Add from '../views/goods/add.vue'
-
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: '/login' // 重定向
+    redirect: '/login'
   },
   {
     path: '/login',
@@ -24,54 +16,34 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    redirect: '/home/reports',
+    redirect: '/home/overview',
     meta: { ishome: true, keepAlive: true },
     component: () => import('../views/Home.vue'),
     children: [
       {
-        path: '/home/welcome',
-        name: 'welcome',
-        component: () => import('../views/Welcome.vue')
-      },
-
-      {
-        path: '/home/reports',
-        component: () => import('../views/report/Report.vue')
+        path: 'overview',
+        component: () => import('../views/overview/overview.vue')
       },
       {
-        path: '/home/orders',
-        component: () => import('../views/order/order.vue')
-      },
-
-      {
-        path: '/home/users',
-        component: Users
+        path: 'fileList',
+        component: () => import('../views/documentManage/fileList.vue')
       },
       {
-        path: '/home/rights',
-        component: Rights
+        path: 'fileStatistic',
+        component: () => import('../views/documentManage/fileStatistic.vue')
       },
       {
-        path: '/home/roles',
-        component: Roles
+        path: 'environment',
+        component: () => import('../views/environment/environment.vue')
       },
       {
-        path: '/home/categories',
-        component: Cate
+        path: 'user',
+        component: () => import('../views/system/userList.vue')
       },
       {
-        path: '/home/params',
-        component: Params
-      },
-      {
-        path: '/home/goods',
-        component: List
-      },
-      {
-        path: '/home/goods/add',
-        component: Add
+        path: 'role',
+        component: () => import('../views/system/roleList.vue')
       }
-
     ]
   }
 ]

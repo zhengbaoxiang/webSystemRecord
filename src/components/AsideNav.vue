@@ -19,17 +19,16 @@
           :index="'/home/' + item.path"
           v-if="!item.children || item.children.length === 0"
           @click.native="menuClick(item)"
-          class="borderRed"
         >
-          <i :class="item.icon"></i>
+          <i :class="item.icon + ' myIcon'"></i>
           <!-- 文本 需要slot-->
           <span slot="title">{{ item.authName }}</span>
         </el-menu-item>
         <!-- 一级菜单 有子菜单-el-submenu   -->
-        <el-submenu :index="item.id + ''" v-else class="borderGreen">
+        <el-submenu :index="item.id + ''" v-else >
           <!-- 一级菜单的模板区 -->
           <template slot="title">
-            <i :class="item.icon"></i>
+            <i :class="item.icon + ' myIcon'"></i>
             <span slot="title">{{ item.authName }}</span>
           </template>
           <!--子 菜单项 -->
@@ -97,8 +96,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.iconfont {
+.myIcon {
     margin-right: 10px;
+    width: 16px;
+    height: 16px;
 }
 
 </style>

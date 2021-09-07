@@ -5,7 +5,7 @@
       <div class="avatar_box">
           <img src="../assets/imgs/logo.png" alt="" />
       </div>
-      <div class="topTitle">管理系统</div>
+      <div class="topTitle">档案管理系统</div>
       <!-- 登录表单区 -->
       <el-form
         ref="loginFormRef"
